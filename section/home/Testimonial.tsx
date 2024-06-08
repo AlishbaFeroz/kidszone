@@ -31,7 +31,7 @@ const Testimonial: React.FC = () => {
             <div key={index} className="bg-white p-5">
               <div className="flex justify-between pb-3">
                 <div className="flex">
-                  <Image src={card.img} width={70} height={70} />
+                  <Image src={card.img} width={70} height={70} alt="reload" />
                   <h3 className="text-[#02165C] text-center font-bold text-lg ml-2">
                     Rana Begum
                   </h3>
@@ -39,7 +39,12 @@ const Testimonial: React.FC = () => {
                 <div className="flex">
                   {rating.map((icon, index) => (
                     <div key={index}>
-                      <Image src={icon.img} width={25} height={25} />
+                      <Image
+                        src={icon.img}
+                        width={25}
+                        height={25}
+                        alt="reload"
+                      />
                     </div>
                   ))}
                 </div>

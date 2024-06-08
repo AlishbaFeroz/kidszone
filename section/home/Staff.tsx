@@ -40,6 +40,7 @@ const Staff: React.FC = () => {
                 src={teacher.img}
                 width={120}
                 height={150}
+                alt="reload"
                 // className="rounded-full"
               />
             </div>
