@@ -45,13 +45,13 @@ const SuccessStories: FC = () => {
             key={index}
             className="bg-white border-4 border-b-[#f7641bb4] border-r-[#f7641bb4] shadow-lg rounded-xl overflow-hidden"
           >
-            <div className="w-full h-[200px] md:h-[200px] relative overflow-hidden">
+            <div className="w-full h-[200px] md:h-[200px] group relative overflow-hidden">
               <Image
                 src={card.imageSrc}
                 alt={card.heading}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-t-lg"
+                className="rounded-t-lg transition-transform duration-500 ease-in-out transform group-hover:scale-125"
               />
             </div>
             <div className="p-4">

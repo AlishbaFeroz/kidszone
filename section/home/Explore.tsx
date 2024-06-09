@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -35,7 +34,7 @@ const cards = [
 const ExploreCategories = () => {
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
@@ -67,26 +66,26 @@ const ExploreCategories = () => {
         Explore Opportunities
       </h1>
       <div className="flex flex-col items-center justify-center w-full">
-        <div className="w-full max-w-5xl md:h-[520px]">
+        <div className="w-full max-w-5xl px-7 md:px-0">
           <Slider {...settings} className="relative">
             {cards.map((card, index) => (
-              <div key={index} className="px-4 pb-8 h-full">
-                <div className="border-t-2 border-l-2 border-r-8 border-b-8 border-[#f7641ba3] rounded-lg">
-                  <div className="w-full h-[300px] md:h-[250px] relative rounded-lg overflow-hidden">
+              <div key={index} className="px-2 pb-8">
+                <div className="border h-full border-r-4 border-b-4 border-[#f7641ba3] rounded-lg">
+                  <div className="w-full h-[300px] md:h-[250px] group relative rounded-lg overflow-hidden">
                     <Image
                       src={card.imageSrc}
                       alt={card.heading}
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-lg"
+                      className="rounded-lg transition-transform duration-500 ease-in-out transform group-hover:scale-125"
                     />
                   </div>
-                  <div className="p-4 bg-white rounded-b-lg ">
+                  <div className="p-4 bg-white rounded-b-lg">
                     <h2 className="text-[#02165C] text-xl font-bold">
                       {card.heading}
                     </h2>
-                    <p className="text-[#494949] mt-2">{card.paragraph}</p>
-                    <div className="pt-5">
+                    <p className="text-[#494949]">{card.paragraph}</p>
+                    <div className="pt-2">
                       <Button label="Apply Now" />
                     </div>
                   </div>
@@ -94,34 +93,38 @@ const ExploreCategories = () => {
               </div>
             ))}
           </Slider>
-          <style jsx global>{`
-            .slick-dots {
-              display: flex;
-              justify-content: center;
-              list-style: none;
-              width: 100%;
-            }
-
-            .slick-dots li button {
-              width: 12px;
-              height: 12px;
-              font-size: 0;
-              border: none;
-              border-radius: 50%;
-              background-color: #333;
-              cursor: pointer;
-            }
-
-            .slick-dots li:not(:first-child):not(:last-child) {
-              display: none;
-            }
-
-            .slick-dots li.slick-active button {
-              background-color: #f7631b;
-            }
-          `}</style>
         </div>
       </div>
+      <style jsx global>{`
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          bottom: -25px;
+          width: 100%;
+        }
+
+        .slick-dots li {
+          margin: 0 5px;
+        }
+
+        .slick-dots li button {
+          width: 12px;
+          height: 12px;
+          font-size: 0;
+          border: none;
+          border-radius: 50%;
+          background-color: #333;
+          cursor: pointer;
+        }
+
+        .slick-dots li.slick-active button {
+          background-color: #f7631b;
+        }
+      `}</style>
     </>
   );
 };

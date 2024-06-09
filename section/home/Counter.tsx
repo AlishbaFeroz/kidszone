@@ -57,7 +57,7 @@ const Counter: React.FC = () => {
                 type="text"
                 id="name"
                 placeholder="enter your name"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm"
+                className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#071351] focus:border-[#071351] sm:text-sm"
               />
             </div>
             <div className="mb-4">
@@ -71,7 +71,7 @@ const Counter: React.FC = () => {
                 type="email"
                 id="email"
                 placeholder="enter your email"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm"
+                className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#071351] focus:border-[#071351] sm:text-sm"
               />
             </div>
             <div className="mb-4">
@@ -85,12 +85,12 @@ const Counter: React.FC = () => {
                 id="message"
                 rows={4}
                 placeholder="type your message here"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#071351] focus:border-[#071351]"
               />
             </div>
             <button
               type="submit"
-              className="bg-transparent w-full border-2 border-[#F7631B] px-5 py-2 rounded-lg text-[#F7631B]"
+              className="bg-transparent w-full border-2 border-[#F7631B] hover:bg-[#F7631B] hover:text-white transition duration-500 px-5 py-2 rounded-lg text-[#F7631B]"
             >
               Submit
             </button>

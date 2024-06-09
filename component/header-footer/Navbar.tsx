@@ -5,7 +5,6 @@ import Header from "./Header";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isLoginOpen, setIsLoginOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -50,23 +49,23 @@ const Navbar: React.FC = () => {
         </div>
         <div className="hidden md:flex items-center space-x-6">
           <Link href="/" legacyBehavior>
-            <a className="hover:text-[#00FF29] transition duration-200">Home</a>
+            <a className="hover:text-[#F7631B] transition duration-200">Home</a>
           </Link>
           <Link href="/properties" legacyBehavior>
-            <a className="hover:text-[#00FF29] transition duration-200">
+            <a className="hover:text-[#F7631B] transition duration-200">
               Properties
             </a>
           </Link>
           <Link href="/blog" legacyBehavior>
-            <a className="hover:text-[#00FF29] transition duration-200">Blog</a>
+            <a className="hover:text-[#F7631B] transition duration-200">Blog</a>
           </Link>
           <Link href="/about" legacyBehavior>
-            <a className="hover:text-[#00FF29] transition duration-200">
+            <a className="hover:text-[#F7631B] transition duration-200">
               About
             </a>
           </Link>
           <Link href="/contact" legacyBehavior>
-            <a className="hover:text-[#00FF29] transition duration-200">
+            <a className="hover:text-[#F7631B] transition duration-200">
               Contact
             </a>
           </Link>
@@ -100,7 +99,7 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col items-center justify-center space-y-4">
             <Link href="/" legacyBehavior>
               <a
-                className="block py-2 px-4 hover:text-[#00FF29] transition duration-200"
+                className="block py-2 px-4 hover:text-[#F7631B] transition duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
@@ -108,7 +107,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/properties" legacyBehavior>
               <a
-                className="block py-2 px-4 hover:text-[#00FF29] transition duration-200"
+                className="block py-2 px-4 hover:text-[#F7631B] transition duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Properties
@@ -116,7 +115,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/blog" legacyBehavior>
               <a
-                className="block py-2 px-4 hover:text-[#00FF29] transition duration-200"
+                className="block py-2 px-4 hover:text-[#F7631B] transition duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
@@ -124,7 +123,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/about" legacyBehavior>
               <a
-                className="block py-2 px-4 hover:text-[#00FF29] transition duration-200"
+                className="block py-2 px-4 hover:text-[#F7631B] transition duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
@@ -132,7 +131,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/contact" legacyBehavior>
               <a
-                className="block py-2 px-4 hover:text-[#00FF29] transition duration-200"
+                className="block py-2 px-4 hover:text-[#F7631B] transition duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

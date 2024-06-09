@@ -16,22 +16,26 @@ const Home: React.FC = () => {
       <div className="md:mb-0 mt-14 mb-[900px] lg:mb-60">
         <Card />
       </div>
-      <div className="md:pt-0 pt-5">
+      <div className="md:pt-0 pt-20">
         <AboutUs />
       </div>
-      <div className="md:pt-2">
+      <div className="md:pt-1 md:my-20 my-10">
         <ExploreCategories />
       </div>
       <Counter />
       <div className="mt-24">
         <SuccessStories />
       </div>
+      <div className="flex justify-center">
+        <hr className="my-10 lg:w-10/12 md:block hidden" />
+      </div>
+      <div>
+        <Testimonial />
+      </div>
       <div className="mt-24">
         <LatestNews />
       </div>
-      <div className="mt-24">
-        <Testimonial />
-      </div>
+
       <div className="mt-24">
         <Staff />
       </div>

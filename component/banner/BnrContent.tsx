@@ -3,7 +3,7 @@ import Button from "../core/Button";
 const BnrContent: React.FC = () => {
   return (
     <>
-      <div className="absolute z-30 inset-0 flex items-center lg:px-28 md:px-16 pl-5 pr-16 max-w-5xl">
+      <div className="absolute z-30 inset-0 flex items-center lg:px-32 md:px-16 pl-5 pr-16 max-w-5xl">
         <div className="space-y-5">
           <h1 className="text-white md:text-4xl text-2xl font-bold">
             WE ENSURE BETTER EDUCATION FOR A BETTER WORLD
