@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from "../../component/core/Button";
+import Container from "../../component/core/Container";
 
 const cards = [
   {
@@ -62,69 +63,71 @@ const ExploreCategories = () => {
 
   return (
     <>
-      <h1 className="text-[#02165C] text-center text-2xl font-bold md:text-3xl my-8">
-        Explore Opportunities
-      </h1>
-      <div className="flex flex-col items-center justify-center w-full">
-        <div className="w-full max-w-5xl px-7 md:px-0">
-          <Slider {...settings} className="relative">
-            {cards.map((card, index) => (
-              <div key={index} className="px-2 pb-8">
-                <div className="border h-full border-r-4 border-b-4 border-[#f7641ba3] rounded-lg">
-                  <div className="w-full h-[300px] md:h-[250px] group relative rounded-lg overflow-hidden">
-                    <Image
-                      src={card.imageSrc}
-                      alt={card.heading}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-lg transition-transform duration-500 ease-in-out transform group-hover:scale-125"
-                    />
-                  </div>
-                  <div className="p-4 bg-white rounded-b-lg">
-                    <h2 className="text-[#02165C] text-xl font-bold">
-                      {card.heading}
-                    </h2>
-                    <p className="text-[#494949]">{card.paragraph}</p>
-                    <div className="pt-2">
-                      <Button label="Apply Now" />
+      <Container>
+        <h1 className="text-[#02165C] text-center text-2xl font-bold md:text-3xl my-8">
+          Explore Opportunities
+        </h1>
+        <div className="flex flex-col items-center justify-center w-full">
+          <div className="w-full px-5">
+            <Slider {...settings} className="relative">
+              {cards.map((card, index) => (
+                <div key={index} className="px-2 pb-8">
+                  <div className="border h-full border-r-4 border-b-4 border-[#f7641ba3] rounded-lg">
+                    <div className="w-full h-[300px] md:h-[250px] group relative rounded-lg overflow-hidden">
+                      <Image
+                        src={card.imageSrc}
+                        alt={card.heading}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-lg transition-transform duration-500 ease-in-out transform group-hover:scale-125"
+                      />
+                    </div>
+                    <div className="p-4 bg-white rounded-b-lg">
+                      <h2 className="text-[#02165C] text-xl font-bold">
+                        {card.heading}
+                      </h2>
+                      <p className="text-[#494949]">{card.paragraph}</p>
+                      <div className="pt-2">
+                        <Button label="Apply Now" />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
-      <style jsx global>{`
-        .slick-dots {
-          display: flex !important;
-          justify-content: center;
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          position: absolute;
-          bottom: -25px;
-          width: 100%;
-        }
+        <style jsx global>{`
+          .slick-dots {
+            display: flex !important;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+          }
 
-        .slick-dots li {
-          margin: 0 5px;
-        }
+          .slick-dots li {
+            margin: 0 5px;
+          }
 
-        .slick-dots li button {
-          width: 12px;
-          height: 12px;
-          font-size: 0;
-          border: none;
-          border-radius: 50%;
-          background-color: #333;
-          cursor: pointer;
-        }
+          .slick-dots li button {
+            width: 12px;
+            height: 12px;
+            font-size: 0;
+            border: none;
+            border-radius: 50%;
+            background-color: #333;
+            cursor: pointer;
+          }
 
-        .slick-dots li.slick-active button {
-          background-color: #f7631b;
-        }
-      `}</style>
+          .slick-dots li.slick-active button {
+            background-color: #f7631b;
+          }
+        `}</style>
+      </Container>
     </>
   );
 };

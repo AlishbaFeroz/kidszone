@@ -3,7 +3,10 @@ import React from "react";
 
 const FooterImg: React.FC = () => {
   return (
-    <div className="flex flex-wrap mt-16 overflow-hidden" data-aos="fade-down">
+    <div
+      className="flex flex-wrap mt-16 overflow-hidden max-w-[1440px] mx-auto"
+      data-aos="fade-down"
+    >
       <div className="flex-1">
         <Image
           src="/pix/bnrImg1.jpg"

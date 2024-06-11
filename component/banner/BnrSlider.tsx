@@ -16,7 +16,7 @@ const BnrSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[550px] overflow-hidden mt-[-64px]">
+    <div className="relative w-full h-[550px] max-w-[1440px] mx-auto overflow-hidden mt-[-64px]">
       {images.map((image, index) => (
         <div
           key={index}

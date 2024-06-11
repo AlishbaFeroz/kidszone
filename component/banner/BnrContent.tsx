@@ -13,7 +13,7 @@ const BnrContent: React.FC = () => {
             leap forward than the building and launch of the space telescope
             known as the Hubble.
           </p>
-          <div className="md:space-x-3 md:space-y-0 space-y-5 flex-col md:flex-row">
+          <div className="space-x-3 md:space-y-0 space-y-5 flex-col md:flex-row">
             <button className="bg-[#F7631B] px-5 py-2 border-2 border-[#F7631B] rounded-lg text-white">
               Enroll Now
             </button>

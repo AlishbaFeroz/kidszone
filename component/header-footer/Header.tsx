@@ -33,16 +33,23 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div
-      className={`bg-[#F7631B] md:block hidden text-white z-50 p-1 ${
-        isScrolled ? "fixed top-0 left-0 w-full" : ""
-      }`}
-    >
-      <h2 className="flex items-center justify-center">
-        We are offering best &nbsp;
-        <Image src="/pix/25-percent.png" alt="reload" width={35} height={35} />
-        &nbsp; discount services in 2024 session
-      </h2>
+    <div className="max-w-[1440px] mx-auto">
+      <div
+        className={`bg-[#F7631B] md:block hidden  text-white z-50 p-1 ${
+          isScrolled ? "fixed top-0 left-0 w-full" : ""
+        }`}
+      >
+        <h2 className="flex items-center justify-center">
+          We are offering best &nbsp;
+          <Image
+            src="/pix/25-percent.png"
+            alt="reload"
+            width={35}
+            height={35}
+          />
+          &nbsp; discount services in 2024 session
+        </h2>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
+import Container from "../../component/core/Container";
 
 interface CardProps {
   imageSrc: string;
@@ -36,37 +37,39 @@ const SuccessStories: FC = () => {
 
   return (
     <>
-      <h1 className="text-[#02165C] text-center font-bold md:text-3xl text-2xl my-5">
-        Our Success Stories
-      </h1>
-      <div className="grid md:grid-cols-3 md:px-32 sm:grid-cols-2 grid-cols-1 gap-5 justify-center w-full p-4">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-white border-4 border-b-[#f7641bb4] border-r-[#f7641bb4] shadow-lg rounded-xl overflow-hidden"
-          >
-            <div className="w-full h-[200px] md:h-[200px] group relative overflow-hidden">
-              <Image
-                src={card.imageSrc}
-                alt={card.heading}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-t-lg transition-transform duration-500 ease-in-out transform group-hover:scale-125"
-              />
+      <Container>
+        <h1 className="text-[#02165C] text-center font-bold md:text-3xl text-2xl my-5">
+          Our Success Stories
+        </h1>
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 justify-center w-full p-4">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="bg-white border-4 border-b-[#f7641bb4] border-r-[#f7641bb4] shadow-lg rounded-xl overflow-hidden"
+            >
+              <div className="w-full h-[200px] md:h-[200px] group relative overflow-hidden">
+                <Image
+                  src={card.imageSrc}
+                  alt={card.heading}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-t-lg transition-transform duration-500 ease-in-out transform group-hover:scale-125"
+                />
+              </div>
+              <div className="p-4">
+                <h1 className="text-xl text-[#454545] font-bold">
+                  {card.heading}
+                </h1>
+                <h5 className="text-sm text-gray-500">{card.subTitle}</h5>
+                <p className="text-[#494949] mt-2 line-clamp-3">{card.para}</p>
+                <p className="text-[#02165C] text-sm underline cursor-pointer py-2">
+                  {card.link}
+                </p>
+              </div>
             </div>
-            <div className="p-4">
-              <h1 className="text-xl text-[#454545] font-bold">
-                {card.heading}
-              </h1>
-              <h5 className="text-sm text-gray-500">{card.subTitle}</h5>
-              <p className="text-[#494949] mt-2 line-clamp-3">{card.para}</p>
-              <p className="text-[#02165C] text-sm underline cursor-pointer py-2">
-                {card.link}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Container>
     </>
   );
 };

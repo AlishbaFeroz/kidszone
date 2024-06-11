@@ -231,7 +231,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div className="max-w-[1440px] mx-auto overflow-x-hidden">
       <h1 className="text-center text-[#020A25] font-bold md:text-3xl text-2xl pb-5">
         Our Client Reviews
       </h1>

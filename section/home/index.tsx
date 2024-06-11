@@ -13,10 +13,10 @@ const Home: React.FC = () => {
   return (
     <>
       <BnrSlider />
-      <div className="md:mb-0 mt-14 mb-[900px] lg:mb-60">
-        <Card />
-      </div>
-      <div className="md:pt-0 pt-20">
+      {/* <div className="md:mb-0 mt-14 mb-[900px] lg:mb-60"> */}
+      <Card />
+      {/* </div> */}
+      <div className="mt-[-80px]">
         <AboutUs />
       </div>
       <div className="md:pt-1 md:my-20 my-10">

@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#020a25df] text-[white] shadow-lg z-20 relative">
+    <div className="bg-[#020a25df] text-[white] shadow-lg z-20 max-w-[1440px] mx-auto relative">
       <div className="md:block hidden">{/* <Header /> */}</div>
       <div className="container mx-auto flex items-center justify-between p-4 md:h-16">
         <div className="text-2xl font-bold">
@@ -49,11 +49,18 @@ const Navbar: React.FC = () => {
         </div>
         <div className="hidden md:flex items-center space-x-6">
           <Link href="/" legacyBehavior>
-            <a className="hover:text-[#F7631B] transition duration-200">Home</a>
+            <a className="hover:text-[#F7631B] cursor-pointer transition duration-200">
+              Home
+            </a>
           </Link>
           <Link href="/properties" legacyBehavior>
             <a className="hover:text-[#F7631B] transition duration-200">
-              Properties
+              Admissions
+            </a>
+          </Link>
+          <Link href="/properties" legacyBehavior>
+            <a className="hover:text-[#F7631B] transition duration-200">
+              Facilities
             </a>
           </Link>
           <Link href="/blog" legacyBehavior>
@@ -111,6 +118,14 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Properties
+              </a>
+            </Link>
+            <Link href="/properties" legacyBehavior>
+              <a
+                className="block py-2 px-4 hover:text-[#F7631B] transition duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Facilities
               </a>
             </Link>
             <Link href="/blog" legacyBehavior>

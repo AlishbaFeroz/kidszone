@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../../component/core/Button";
+import Container from "../../component/core/Container";
 
 const AboutUs: React.FC = () => {
   const aboutPara = [
@@ -13,50 +14,51 @@ const AboutUs: React.FC = () => {
   ];
   return (
     <>
-      <div
-        className="lg:mx-auto my-16 mb-[70px] w-full px-4 md:px-14 lg:px-32"
-        data-aos="fade-down"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
-          <div className="md:mr-5">
-            <h5 className="text-[#F7631B] text-md font-bold">About Us</h5>
-            <h1 className="text-[#02165C] text-2xl font-bold">Why Choose Us</h1>
-            {aboutPara.map((paragraph, index) => (
-              <p key={index} className="text-[#616161] pt-2 leading-6">
-                {paragraph}
-              </p>
-            ))}
-            {bulletPoints.map((point, index) => (
-              <div key={index} className="flex items-center mt-2">
-                <Image
-                  src="/pix/checklist.png"
-                  alt="bullet"
-                  width={20}
-                  height={20}
-                />
-                <p className="ml-2 text-[#616161]">{point}</p>
+      <Container>
+        <div className="my-16 mb-[70px] w-full" data-aos="fade-down">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
+            <div className="md:mr-5">
+              <h5 className="text-[#F7631B] text-md font-bold">About Us</h5>
+              <h1 className="text-[#02165C] text-2xl font-bold">
+                Why Choose Us
+              </h1>
+              {aboutPara.map((paragraph, index) => (
+                <p key={index} className="text-[#616161] pt-2 leading-6">
+                  {paragraph}
+                </p>
+              ))}
+              {bulletPoints.map((point, index) => (
+                <div key={index} className="flex items-center mt-2">
+                  <Image
+                    src="/pix/checklist.png"
+                    alt="bullet"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="ml-2 text-[#616161]">{point}</p>
+                </div>
+              ))}
+
+              <div className="my-5">
+                <Button label="Learn More" />
               </div>
-            ))}
-
-            <div className="my-5">
-              <Button label="Learn More" />
             </div>
-          </div>
 
-          <div className="w-full hidden md:block  relative h-auto">
-            <div className="absolute top-0 right-16 hidden lg:block bg-[#F7631B] w-[400px] h-[320px] z-0"></div>
-            <div className="relative mt-7 z-10">
-              <Image
-                src="/pix/aboutimg.jpg"
-                alt="apartment"
-                width={450}
-                height={500}
-                className="md:h-[300px] lg:w-[450px] w-full lg:h-[350px]"
-              />
+            <div className="w-full hidden md:block  relative h-auto">
+              <div className="absolute top-0 left-36 hidden lg:block bg-[#F7631B] w-[400px] h-[320px] z-0"></div>
+              <div className="relative mt-7 z-10">
+                <Image
+                  src="/pix/aboutimg.jpg"
+                  alt="apartment"
+                  width={450}
+                  height={500}
+                  className="md:h-full lg:w-full overflow-hidden px-12 w-full lg:h-[350px]"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };

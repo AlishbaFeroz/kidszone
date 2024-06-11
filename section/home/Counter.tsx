@@ -4,7 +4,7 @@ import Button from "../../component/core/Button";
 
 const Counter: React.FC = () => {
   return (
-    <div className="relative w-full md:min-h-[550px] bg-cover bg-center">
+    <div className="relative w-full md:min-h-[550px] max-w-[1440px] mx-auto bg-cover bg-center">
       <div className="absolute inset-0">
         <Image
           src="/pix/staff.jpg"
