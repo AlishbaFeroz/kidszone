@@ -52,7 +52,7 @@ const AboutUs: React.FC = () => {
                   alt="apartment"
                   width={450}
                   height={500}
-                  className="md:h-full lg:w-full overflow-hidden md:px-12 md:px-0 w-full lg:h-[350px]"
+                  className="md:h-full lg:w-full overflow-hidden md:px-12 px-0 w-full lg:h-[350px]"
                 />
               </div>
             </div>
