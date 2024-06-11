@@ -36,7 +36,7 @@ const Header: React.FC = () => {
     <div className="max-w-[1440px] mx-auto">
       <div
         className={`bg-[#F7631B] md:block hidden  text-white z-50 p-1 ${
-          isScrolled ? "fixed top-0 left-0 w-full" : ""
+          isScrolled ? "fixed top-0 mx-auto w-full max-w-[1440px]" : ""
         }`}
       >
         <h2 className="flex items-center justify-center">
