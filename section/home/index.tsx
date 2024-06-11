@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       {/* <div className="md:mb-0 mt-14 mb-[900px] lg:mb-60"> */}
       <Card />
       {/* </div> */}
-      <div className="mt-[-80px]">
+      <div className="md:mt-[-80px] mt-[-300px]">
         <AboutUs />
       </div>
       <div className="md:pt-1 md:my-20 my-10">

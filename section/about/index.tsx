@@ -15,7 +15,7 @@ const AboutUs: React.FC = () => {
   return (
     <>
       <Container>
-        <div className="my-16 mb-[70px] w-full" data-aos="fade-down">
+        <div className="md:my-16 mb-[70px] w-full" data-aos="fade-down">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
             <div className="md:mr-5">
               <h5 className="text-[#F7631B] text-md font-bold">About Us</h5>
@@ -52,7 +52,7 @@ const AboutUs: React.FC = () => {
                   alt="apartment"
                   width={450}
                   height={500}
-                  className="md:h-full lg:w-full overflow-hidden px-12 w-full lg:h-[350px]"
+                  className="md:h-full lg:w-full overflow-hidden md:px-12 md:px-0 w-full lg:h-[350px]"
                 />
               </div>
             </div>
