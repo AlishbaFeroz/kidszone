@@ -1,19 +1,19 @@
 import PagesBnr from "../../component/banner/PagesBnr";
-import Admission from "../../section/admission";
-
+import ClassRoom from "../../section/facilities/ClassRooms";
 export default function admission() {
   return (
     <>
       <div>
         <PagesBnr
-          backgroundImage="/pix/admission.jpg"
-          title="Admission"
+          backgroundImage="/pix/bnr.jpg"
+          title="Facilities"
           alt="banner image"
-          para="Home / Admission"
+          para="Home / Facilities"
           buttonText="Contact Now"
         />
       </div>
-      <Admission />
+      {/* <Facilities /> */}
+      <ClassRoom />
     </>
   );
 }

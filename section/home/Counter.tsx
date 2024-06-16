@@ -42,7 +42,7 @@ const Counter: React.FC = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/3 md:w-1/2 p-4">
-          <form className="bg-white lg:p-8 p-5 rounded-lg shadow-lg">
+          <form className="bg-white  h-full border-r-4 border-b-4 border-[#f7641bbe] lg:p-8 p-5 rounded-lg shadow-lg">
             <h1 className="text-2xl text-center font-bold mb-4 text-[#02165C]">
               Contact Us
             </h1>

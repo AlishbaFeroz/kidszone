@@ -1,40 +1,33 @@
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Container from "../../component/core/Container";
+import { useRouter } from "next/router";
 
 interface CardProps {
+  id: string;
   imageSrc: string;
   heading: string;
   subTitle: string;
   para: string;
   link: string;
 }
-
 const SuccessStories: FC = () => {
-  const cards: CardProps[] = [
-    {
-      imageSrc: "/pix/success-journey.jpg",
-      heading: "Our Success Journey",
-      subTitle: "25 April, 2018 | By Mark Wiens",
-      para: "Join us on our exciting journey of success. With every step, we have shown dedication and resilience. Let's celebrate our victories together and anticipate the adventures ahead.",
-      link: "Read More",
-    },
-    {
-      imageSrc: "/pix/award.jpg",
-      heading: "Achieving Award Ceremony",
-      subTitle: "25 April, 2018 | By Mark Wiens",
-      para: "Thrilled to share our latest success of best school performance in sports. It's a testament to our dedication and teamwork. Thanks to all who made this possible. Let's keep soaring!",
-      link: "Read More",
-    },
-    {
-      imageSrc: "/pix/aboutimg.jpg",
-      heading: "Student Success Stories",
-      subTitle: "25 April, 2018 | By Mark Wiens",
-      para: "Be inspired by our students' success stories featured on our blog. Discover how our school's unique approach to education is helping students thrive and achieve their goals.",
-      link: "Read More",
-    },
-  ];
+  const [cardsData, setCardsData] = useState<CardProps[]>([]);
+  const router = useRouter();
 
+  useEffect(() => {
+    const fetchCards = async () => {
+      const res = await fetch("/api/ourStories");
+      const data: CardProps[] = await res.json();
+      setCardsData(data);
+    };
+
+    fetchCards();
+  }, []);
+
+  const handleCardClick = (cardId: string) => {
+    router.push(`/blog?id=${cardId}`);
+  };
   return (
     <>
       <Container>
@@ -42,10 +35,11 @@ const SuccessStories: FC = () => {
           Our Success Stories
         </h1>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 justify-center w-full p-4">
-          {cards.map((card, index) => (
+          {cardsData.map((card) => (
             <div
-              key={index}
-              className="bg-white border-4 border-b-[#f7641bb4] border-r-[#f7641bb4] shadow-lg rounded-xl overflow-hidden"
+              key={card.id}
+              onClick={() => handleCardClick(card.id)}
+              className="bg-white border-4 border-b-[#f7641bb4] cursor-pointer border-r-[#f7641bb4] shadow-lg rounded-xl overflow-hidden"
             >
               <div className="w-full h-[200px] md:h-[200px] group relative overflow-hidden">
                 <Image
