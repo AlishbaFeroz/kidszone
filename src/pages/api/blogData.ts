@@ -155,8 +155,6 @@ export default function handler(
     const blogPost = blogData.find((post) => post.id === id);
     if (blogPost) {
       res.status(200).json(blogPost);
-    } else {
-      res.status(404).json({ message: "Blog post not found" });
     }
   } else {
     res.status(200).json(blogData);
