@@ -1,5 +1,6 @@
-import Blog from "../../section/blog";
+// import Blog from "../../section/blog/BlogData";
 import PagesBnr from "../../component/banner/PagesBnr";
+import Blog from "../../section/blog";
 import SuccessStories from "../../section/home/SuccessStories";
 
 export default function blog() {

@@ -11,7 +11,7 @@ interface CardProps {
   para: string;
   link: string;
 }
-const SuccessStories: FC = () => {
+const SuccessStories: React.FC = () => {
   const [cardsData, setCardsData] = useState<CardProps[]>([]);
   const router = useRouter();
 
